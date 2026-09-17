@@ -110,7 +110,7 @@ int Baja_ABB(Arbol *a, PadronABB elector) {
     // Localizar el nodo a eliminar
     Localizar_ABB(a, elector.dni, &exitoLocalizar, &comparaciones);
 
-    if (!exitoLocalizar) return 0;  // alumno no encontrado
+    if (!exitoLocalizar) return 0;  // elector no encontrado
 
     NodoA *nodoeliminar = a->cur;
 
@@ -191,7 +191,7 @@ void MostrarEstructura_ABB(Arbol *a) {
         return;
     }
 
-    NodoA *pila[MAXELECTORES];  // Pila para manejar hasta 130 alumnos
+    NodoA *pila[MAXELECTORES];  // Pila para manejar hasta 2000 electores
     int tope = -1;
     int contador = 0;
     // Iniciar con la raíz del árbol
